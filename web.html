@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spardha - VVIT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #002147;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 50px;
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        header {
+            text-align: center;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO9ipjaDGVE-wt2a7qNPxy5z22_jLyj95WUQ&s') no-repeat center center/cover;
+            color: red;
+            padding: 150px 20px;
+            margin-top: 80px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .fade {
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        #video {
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #002147;
+            color: white;
+        }
+    </style>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 10 seconds
+        }
+        window.onload = function() {
+            showSlides();
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <img src="acmlogo.png" alt="ACM VVIT Logo" class="logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#details">Event Details</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Welcome to Spardha - VVIT</h1>
+        <p>Experience the thrill of competition!</p>
+    </header>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="slideshow-container">
+            <img src="https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/mobile_banner/66bd94b606ed6_spardha-2k24.webp" class="slide fade" alt="Spardha Image 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxWboBZuum9lDqAJfX4Vzl7SE8E3qciuxm4_sdYzm2APZPOsWWFGsj1DmnQi3S0RkhAIQ&usqp=CAU" class="slide fade" alt="Spardha Image 2">
+            <img src="image3.jpg" class="slide fade" alt="Spardha Image 3">
+            <img src="image4.jpg" class="slide fade" alt="Spardha Image 4">
+            <img src="image5.jpg" class="slide fade" alt="Spardha Image 5">
+            <img src="image6.jpg" class="slide fade" alt="Spardha Image 6">
+        </div>
+    </section>
+    
+    <section id="video">
+        <h2>Watch Spardha 2024 Highlights</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TJeYerqsTwM?si=A7ZuJAHebM9hnWVH&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </iframe>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Spardha VVIT | Inspired by ACM VVIT</p>
+    </footer>
+</body>
+</html>
